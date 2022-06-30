@@ -55,6 +55,8 @@ project-thumb:hover {
 }
 </style>
 <script type="text/javascript">
+	const projectIndex = JSON.parse(require("/projects/projects.json"));
+	 
 	activateFamily = function(newID) {
 		document.getElementById("smiku-labs").className = document.getElementById("smiku-labs").className.replace( /(?:^|\s)active(?!\S)/g , '' );
 		document.getElementById("aacc").className = document.getElementById("aacc").className.replace( /(?:^|\s)active(?!\S)/g , '' );
@@ -102,10 +104,6 @@ project-thumb:hover {
         <project-select>
           <project-thumbs>
             <project-thumb> <img width=100% src="projects/project-media/light-cube-125/thumbnail.png"/> 5³ Light Cube </project-thumb>
-            <project-thumb> <img width=100% src="projects/project-media/light-cube-125/thumbnail.png"/> Sample </project-thumb>
-            <project-thumb> <img width=100% src="projects/project-media/light-cube-125/thumbnail.png"/> Sample </project-thumb>
-            <project-thumb> <img width=100% src="projects/project-media/light-cube-125/thumbnail.png"/> Sample </project-thumb>
-            <project-thumb> <img width=100% src="projects/project-media/light-cube-125/thumbnail.png"/> Sample </project-thumb>
           </project-thumbs>
         </project-select>
       </div>
