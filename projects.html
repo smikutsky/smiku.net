@@ -10,42 +10,34 @@
 <script src="http://use.edgefonts.net/allerta:n4:default.js" type="text/javascript"></script>
 <style type="text/css">
 selector {
-    display: grid;
+	display: grid;
 	grid-template-columns: 200px auto;
 }
 family-select {
-    display: inline-block;
-<<<<<<< HEAD
-    width: 200px;
-=======
->>>>>>> parent of c74e246 (2022 first update)
-    padding: 5px;
-    background-color: #EEEEEE;
+	display: inline-block;
+	width: 200px;
+	padding: 5px;
+	background-color: #EEEEEE;
 }
 .family {
-    display: block;
-    padding: 5px;
-    text-align: center;
+	display: block;
+	padding: 5px;
+	text-align: center;
 }
 .family.active {
-    border-style: groove;
+	border-style: groove;
 }
 .family:hover:not(.active) {
-    background-color: #DDDDDD;
+	background-color: #DDDDDD;
 }
-<<<<<<< HEAD
-.project-select {
-    display: block;
-    flex-grow: 1;
-    border-style: hidden;
-=======
 project-select {
-    display: inline-grid;
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+	display: block;
+	flex-grow: 1;
+	border-style: hidden;
 }
-.project-thumb {
-    display: block
->>>>>>> parent of c74e246 (2022 first update)
+project-thumb {
+	display: inline-grid;
+	grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
 }
 </style>
 <script type="text/javascript">
@@ -81,16 +73,13 @@ project-select {
         <div id="phrc" class="family" onClick="activateFamily('phrc')"><img src="images/PHRC-Logo.png" height="100px" alt="AACC Logo"/><br>
           Power Hawks Robotics Club</div>
       </family-select>
-<<<<<<< HEAD
-      <iframe id="project-select-index" class="project-select" src="/projects/smiku-labs-index.html"></iframe>
-=======
       <project-select>
-        <div class="project-thumb"></div>		  
-	  </project-select>
->>>>>>> parent of c74e246 (2022 first update)
+		  
+        <div class="project-thumb"></div>
+      </project-select>
     </selector>
   </section>
 </main>
-<footer>Copyright © 2021 Scott Mikutsky</footer>
+<footer>Copyright © 2021-2022 Scott Mikutsky</footer>
 </body>
 </html>
