@@ -39,9 +39,19 @@ project-select {
 	display: block;
 	border-style: hidden;
 }
-.project-thumbs {
+project-thumbs {
 	display: inline-grid;
-	grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+project-thumb {
+	display: block;
+	text-align: center;
+	padding: 5px;
+	margin: 5px;
+	background-color: #FFFFFF;
+}
+project-thumb:hover {
+	background-color: #EEEEEE;
 }
 </style>
 <script type="text/javascript">
@@ -90,7 +100,13 @@ project-select {
       <div>
         <family-blurb id="family-blurb">Smiku Labs is the collection of all of my personal projects made in my home lab</family-blurb>
         <project-select>
-          <div class="project-thumbs"></div>
+          <project-thumbs>
+            <project-thumb> <img width=100% src="projects/project-media/light-cube-125/thumbnail.png"/> 5³ Light Cube </project-thumb>
+            <project-thumb> <img width=100% src="projects/project-media/light-cube-125/thumbnail.png"/> Sample </project-thumb>
+            <project-thumb> <img width=100% src="projects/project-media/light-cube-125/thumbnail.png"/> Sample </project-thumb>
+            <project-thumb> <img width=100% src="projects/project-media/light-cube-125/thumbnail.png"/> Sample </project-thumb>
+            <project-thumb> <img width=100% src="projects/project-media/light-cube-125/thumbnail.png"/> Sample </project-thumb>
+          </project-thumbs>
         </project-select>
       </div>
     </selector>

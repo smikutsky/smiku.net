@@ -46,6 +46,7 @@ nav {
     background-color: #666666;
 }
 main {
+	min-width: 700px;
     margin: 10%;
     margin-top: 10px;
     margin-bottom: 10px;
