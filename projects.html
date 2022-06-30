@@ -11,10 +11,10 @@
 <style type="text/css">
 selector {
 	display: grid;
-	grid-template-columns: 200px auto;
+	grid-template-columns: 220px auto;
 }
 family-select {
-	display: inline-block;
+	display: block;
 	width: 200px;
 	padding: 5px;
 	background-color: #EEEEEE;
@@ -30,12 +30,16 @@ family-select {
 .family:hover:not(.active) {
 	background-color: #DDDDDD;
 }
+family-blurb {
+	display: block;
+	width: 90%;
+	text-align: center;
+}
 project-select {
 	display: block;
-	flex-grow: 1;
 	border-style: hidden;
 }
-project-thumb {
+.project-thumb {
 	display: inline-grid;
 	grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
 }
@@ -47,7 +51,17 @@ project-thumb {
 		document.getElementById("phrc").className = document.getElementById("phrc").className.replace( /(?:^|\s)active(?!\S)/g , '' );
 		
 		document.getElementById(newID).className += " active";
-		document.getElementById("project-select-index").src = "/projects/" + newID + "-index.html";
+		
+		switch (newID) {
+			case "smiku-labs":
+				document.getElementById("family-blurb").innerHTML = "Smiku Labs is the collection of all of my personal projects made in my home lab";
+				break;
+			case "aacc":
+				document.getElementById("family-blurb").innerHTML = "A collection of the projects I made while a student at Anne Arundel Community College";
+				break;
+			case "phrc":
+				document.getElementById("family-blurb").innerHTML = "The robots I helped to design and build as a member of the Power Hawks Robotic Club FIRST Tech Challenge and FIRST Robotics Competition teams";
+		}
 	}
 </script>
 </head>
@@ -74,7 +88,7 @@ project-thumb {
           Power Hawks Robotics Club</div>
       </family-select>
       <project-select>
-		  
+        <family-blurb id="family-blurb">Smiku Labs is the collection of all of my personal projects made in my home lab</family-blurb>
         <div class="project-thumb"></div>
       </project-select>
     </selector>
