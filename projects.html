@@ -5,77 +5,6 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="stylesheet.css" rel="stylesheet" type="text/css">
-<!--The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the web page. We recommend that you do not modify it.-->
-<script>var __adobewebfontsappname__="dreamweaver"</script>
-<script src="http://use.edgefonts.net/allerta:n4:default.js" type="text/javascript"></script>
-<style type="text/css">
-selector {
-	display: grid;
-	grid-template-columns: 220px auto;
-}
-family-select {
-	display: block;
-	width: 200px;
-	padding: 5px;
-	background-color: #EEEEEE;
-}
-.family {
-	display: block;
-	padding: 5px;
-	text-align: center;
-}
-.family.active {
-	border-style: groove;
-}
-.family:hover:not(.active) {
-	background-color: #DDDDDD;
-}
-family-blurb {
-	display: block;
-	width: 90%;
-	text-align: center;
-}
-project-select {
-	display: block;
-	border-style: hidden;
-}
-project-thumbs {
-	display: inline-grid;
-	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-}
-project-thumb {
-	display: block;
-	text-align: center;
-	padding: 5px;
-	margin: 5px;
-	background-color: #FFFFFF;
-}
-project-thumb:hover {
-	background-color: #EEEEEE;
-}
-</style>
-<script type="text/javascript">
-	const projectIndex = JSON.parse(require("/projects/projects.json"));
-	 
-	activateFamily = function(newID) {
-		document.getElementById("smiku-labs").className = document.getElementById("smiku-labs").className.replace( /(?:^|\s)active(?!\S)/g , '' );
-		document.getElementById("aacc").className = document.getElementById("aacc").className.replace( /(?:^|\s)active(?!\S)/g , '' );
-		document.getElementById("phrc").className = document.getElementById("phrc").className.replace( /(?:^|\s)active(?!\S)/g , '' );
-		
-		document.getElementById(newID).className += " active";
-		
-		switch (newID) {
-			case "smiku-labs":
-				document.getElementById("family-blurb").innerHTML = "Smiku Labs is the collection of all of my personal projects made in my home lab";
-				break;
-			case "aacc":
-				document.getElementById("family-blurb").innerHTML = "A collection of the projects I made while a student at Anne Arundel Community College";
-				break;
-			case "phrc":
-				document.getElementById("family-blurb").innerHTML = "The robots I helped to design and build as a member of the Power Hawks Robotic Club FIRST Tech Challenge and FIRST Robotics Competition teams";
-		}
-	}
-</script>
 </head>
 
 <body>
@@ -90,24 +19,7 @@ project-thumb:hover {
 </header>
 <main>
   <section>
-    <selector>
-      <family-select>
-        <div id="smiku-labs" class="family active" onClick="activateFamily('smiku-labs')"><img src="images/SmikuLabs-SquareLetters.svg" height="100px" alt="Smiku Labs Logo"/><br>
-          Smiku Labs</div>
-        <div id="aacc" class="family" onClick="activateFamily('aacc')"><img src="images/AACC-Logo.png" height="100px" alt="AACC Logo"/><br>
-          Anne Arundel Community College</div>
-        <div id="phrc" class="family" onClick="activateFamily('phrc')"><img src="images/PHRC-Logo.png" height="100px" alt="AACC Logo"/><br>
-          Power Hawks Robotics Club</div>
-      </family-select>
-      <div>
-        <family-blurb id="family-blurb">Smiku Labs is the collection of all of my personal projects made in my home lab</family-blurb>
-        <project-select>
-          <project-thumbs>
-            <project-thumb> <img width=100% src="projects/project-media/light-cube-125/thumbnail.png"/> 5³ Light Cube </project-thumb>
-          </project-thumbs>
-        </project-select>
-      </div>
-    </selector>
+    <h2 align="center">Coming soon...</h2>
   </section>
 </main>
 <footer>Copyright © 2021-2022 Scott Mikutsky</footer>
