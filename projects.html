@@ -4,6 +4,7 @@
 <title>Projects</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
 <link href="stylesheet.css" rel="stylesheet" type="text/css">
 </head>
 
@@ -29,7 +30,7 @@
         Error playing video</video>
     </div>
     <p>My mechatronics capstone project at AACC was to get an ABB IRB 120 industrial robot to draw using multiple colors of dry erase markers. My partner and I designed, 3D printed, and developed the marker changer attachment for the robot, as well as programmed the robot to draw. We programmed the robot to draw the AACC riverhawk logo, Ukraine, as well as a line art drawing.</p>
-    <div style="text-align: center"> <img src="projects/drawing-robot/marker-changer-cad.png" width="25%" alt="Circuit board of the 5×5×5 light cube"/> <img src="projects/drawing-robot/robot-studio.png" width="55%" alt="Screenshot of the Robot Studio software used to program the robot" style="vertical-align: top"/> </div>
+    <div style="text-align: center"> <img class="has-modal" src="projects/drawing-robot/marker-changer-cad.png" width="25%" alt="Circuit board of the 5×5×5 light cube"/> <img class="has-modal" src="projects/drawing-robot/robot-studio.png" width="55%" alt="Screenshot of the Robot Studio software used to program the robot" style="vertical-align: top"/> </div>
   </section>
   <br>
   <section>
@@ -41,10 +42,28 @@
         <source src="projects/light-cube-125/demo-video.mp4" type="video/mp4">
         <source src="projects/light-cube-125/demo-video.webm" type="video/webm">
         Error playing video</video>
+        Error playing video</video>
     </div>
     <p>My 5×5×5 LED light cube was a project inspired by another light cube I had seen. The project is powered by an Arduino Nano connected to shift registers to handle the additional outputs. I first built a smaller and rougher 4×4×4 cube that's effects were programmed by moifying the byte sent to the shift registers mathematically. The larger and cleaner 5×5×5 cube included drawing functions to make programming of effects much easier.</p>
-    <div style="text-align: center"> <img src="projects/light-cube-125/board-view.jpg" width="40%" alt="Circuit board of the 5×5×5 light cube"/> <img src="projects/light-cube-125/internal-view.jpg" width="40%" alt="Internal view of the 5×5×5 light cube showing wires"/> </div>
+    <div style="text-align: center"> <img class="has-modal" src="projects/light-cube-125/board-view.jpg" width="40%" alt="Circuit board of the 5×5×5 light cube"/> <img class="has-modal" src="projects/light-cube-125/internal-view.jpg" width="40%" alt="Internal view of the 5×5×5 light cube showing wires"/> </div>
   </section>
+  <div id="modal"> <span id="modal-close">×</span> <img id="modal-content"/> </div>
+  <script>
+    var modal = document.getElementById("modal");
+    var modalImg = document.getElementById("modal-content");
+    var images = document.getElementsByClassName("has-modal");
+    
+    for (var i = 0; i < images.length; i ++) {
+      images[i].onclick = function() {
+        modal.style.display = "block";
+        modalImg.src = this.src;
+      };
+    }
+    var span = document.getElementById("modal-close");
+    modal.onclick = function() {
+      modal.style.display = "none";
+    };
+  </script> 
 </main>
 <footer>Copyright © 2021-2022 Scott Mikutsky</footer>
 </body>
