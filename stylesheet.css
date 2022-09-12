@@ -4,13 +4,11 @@
 body {
   background-color: #eaefdb;
   background-image: url("images/Background_Grid.png");
+  background-repeat: repeat;
   overflow-x: hidden;
-  display: flex;
-  flex-direction: column;
   min-height: 100vh;
   padding: 0;
   margin: 0;
-  background-repeat: repeat;
 }
 header {
   color: #EEEEEE;
@@ -48,11 +46,11 @@ nav {
   background-color: #666666;
 }
 main {
+  display: block;
   min-width: 60%;
-  margin: 15%;
+  margin: 10%;
   margin-top: 10px;
   margin-bottom: 10px;
-  flex: 1;
 }
 section {
   background-color: #FFFFFF;
