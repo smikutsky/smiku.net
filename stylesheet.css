@@ -1,10 +1,14 @@
 @charset "utf-8";
-@import url(https://fonts.googleapis.com/css?family=Balsamiq+Sans);
+@import "webfonts/balsamiqsans.css";
+@import "webfonts/barlow.css";
+@import "webfonts/assistant.css";
 @import url(https://fonts.googleapis.com/css?family=Allerta);
 body {
   background-color: #eaefdb;
   background-image: url("images/Background_Grid.png");
   background-repeat: repeat;
+  display: flex;
+  flex-direction: column;
   overflow-x: hidden;
   min-height: 100vh;
   padding: 0;
@@ -46,18 +50,18 @@ nav {
   background-color: #666666;
 }
 main {
-  display: block;
   min-width: 60%;
   margin: 10%;
   margin-top: 10px;
   margin-bottom: 10px;
+  flex: 1;
 }
 section {
   background-color: #FFFFFF;
   padding: 20px;
 }
 footer {
-  font-family: allerta;
+  font-family: 'Barlow';
   font-size: 15px;
   color: #EEEEEE;
   text-align: center;
@@ -81,9 +85,7 @@ h3 {
   font-size: 30px;
 }
 body, td, th {
-  font-family: allerta;
-  font-style: normal;
-  font-weight: 400;
+  font-family: 'Barlow';
   font-size: 17px;
   color: #000000;
 }

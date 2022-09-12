@@ -1,0 +1,21 @@
+@font-face {
+    font-family: 'Assistant';
+    src: url('Assistant-Regular.eot');
+    src: url('Assistant-Regular.eot?#iefix') format('embedded-opentype'),
+         url('Assistant-Regular.woff2') format('woff2'),
+         url('Assistant-Regular.woff') format('woff'),
+         url('Assistant-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Assistant';
+    src: url('Assistant-Bold.eot');
+    src: url('Assistant-Bold.eot?#iefix') format('embedded-opentype'),
+         url('Assistant-Bold.woff2') format('woff2'),
+         url('Assistant-Bold.woff') format('woff'),
+         url('Assistant-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
