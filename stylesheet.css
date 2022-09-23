@@ -1,8 +1,27 @@
 @charset "utf-8";
+@import "webfonts/assistant.css";
 @import "webfonts/balsamiqsans.css";
 @import "webfonts/barlow.css";
-@import "webfonts/assistant.css";
+@import "webfonts/dmsans.css";
+@import "webfonts/signika.css";
+@import "webfonts/ubuntu.css";
+@import "webfonts/varelaround.css";
 @import url(https://fonts.googleapis.com/css?family=Allerta);
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+:root {
+  /*--header-font: 'Balsamiq Sans';/*Original*/
+  --header-font: 'Signika';/*Favorite*/
+  /*--header-font: 'Ubuntu';/**/
+  /*--header-font: 'Varela Round';/**/
+  /*--body-font: 'Allerta';/*Original*/
+  /*--body-font: 'Assistant';/**/
+  /*--body-font: 'Barlow';/**/
+  --body-font: 'DM Sans';/*Favorite*/
+  /*--body-font: 'Roboto';/**/
+  /*--title-font: var(--header-font);/*Original*/
+  --title-font: 'Ubuntu';/*Favorite*/
+}
+
 body {
   background-color: #eaefdb;
   background-image: url("images/Background_Grid.png");
@@ -22,15 +41,15 @@ header {
   z-index: 1;
 }
 title-block {
-  font-family: 'Balsamiq Sans';
-  font-size: 40px;
+  font-family: var(--title-font);
+  font-size: 42px;
   text-align: center;
   background-color: #3366FF;
   display: block;
   padding: 15px;
 }
 nav {
-  font-family: 'Balsamiq Sans';
+  font-family: var(--header-font);
   font-size: 20px;
   text-align: center;
   background-color: #555555;
@@ -61,7 +80,7 @@ section {
   padding: 20px;
 }
 footer {
-  font-family: 'Barlow';
+  font-family: var(--body-font);
   font-size: 15px;
   color: #EEEEEE;
   text-align: center;
@@ -71,7 +90,8 @@ footer {
   padding: 5px;
 }
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Balsamiq Sans";
+  font-family: var(--header-font);
+  font-weight: normal;
   margin: 10px;
   overflow: hidden;
 }
@@ -84,8 +104,11 @@ h2 {
 h3 {
   font-size: 30px;
 }
+h4 {
+  font-size: 20px;
+}
 body, td, th {
-  font-family: 'Barlow';
+  font-family: var(--body-font);
   font-size: 17px;
   color: #000000;
 }
