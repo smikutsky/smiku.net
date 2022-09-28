@@ -7,6 +7,25 @@
 <link rel="icon" href="/favicon.ico" type="image/x-icon">
 <link href="stylesheet.css" rel="stylesheet" type="text/css">
 <style>
+  .hover-caption {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: calc(100% - 10px);
+    height: auto;
+    padding: 2px 5px 2px 5px;
+    margin: 0;
+    overflow-y: auto;
+    color: #FFFFFF;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.8);
+    animation-name: fade;
+    animation-duration: 0.6s;
+  }
+  div:hover > .hover-caption {
+    display: block;
+  }
   .has-modal {
     cursor: pointer;
     transition: 0.3s;
@@ -44,6 +63,14 @@
       transform: scale(1)
     }
   }
+  @keyframes fade {
+    from {
+      opacity: 0
+    }
+    to {
+      opacity: 1
+    }
+  }
 </style>
 </head>
 
@@ -65,12 +92,24 @@
       <div style="flex: 50%">
         <p>My goal was to get an ABB IRB 120 industrial robot to draw a picture using multiple colors of dry erase markers. I designed, 3D printed, and developed the marker changer attachment for the robot. I also programmed the robot with assistance from my partner. We programmed the robot to draw the AACC riverhawk logo, Ukraine, as well as a line art drawing.</p>
         <div style="display: flex">
-          <div style="flex: calc(685/1218); margin: 1%"> <img class="has-modal" src="projects/drawing-robot/marker-changer-with-cutout.png" alt="A rendering of the marker changer with a cutout to show the internal servo and cam" style="width: 100%; height: auto; vertical-align: middle"/> </div>
-          <div style="flex: calc(769/615); margin: 1%"> <img class="has-modal" src="projects/drawing-robot/robot-studio.png" alt="Screenshot of the Robot Studio software used to program the robot" style="width: 100%; height: auto; vertical-align: middle"/> </div>
+          <div style="flex: calc(685/1218); position: relative; margin: 1%">
+            <img class="has-modal" src="projects/drawing-robot/marker-changer-with-cutout.png" alt="A rendering of the marker changer with a cutout to show the internal servo and cam" style="width: 100%; height: auto; vertical-align: middle">
+            <p class="hover-caption">A rendering of the marker changer with a cutout to show the internal servo and cam</p>
+          </div>
+          <div style="flex: calc(769/615); position: relative; margin: 1%">
+            <img class="has-modal" src="projects/drawing-robot/robot-studio.png" alt="Screenshot of the Robot Studio software used to program the robot" style="width: 100%; height: auto; vertical-align: middle">
+            <p class="hover-caption">Screenshot of the Robot Studio software used to program the robot</p>
+          </div>
         </div>
         <div style="display: flex">
-          <div style="flex: calc(1496/1496); margin: 1%"> <img class="has-modal" src="projects/drawing-robot/design-sketch.png" alt="An early concept sketch for the marker changer" style="width: 100%; height: auto; vertical-align: middle"/> </div>
-          <div style="flex: calc(1814/1021); margin: 1%"> <img class="has-modal" src="projects/drawing-robot/version-comparison.png" alt="A comparison of the first marker changer (right) with later versions that incorperated an eraser, but never came to fruition" style="width: 100%; height: auto; vertical-align: middle"/> </div>
+          <div style="flex: calc(1496/1496); position: relative; margin: 1%">
+            <img class="has-modal" src="projects/drawing-robot/design-sketch.png" alt="An early concept sketch for the marker changer" style="width: 100%; height: auto; vertical-align: middle">
+            <p class="hover-caption">An early concept sketch for the marker changer</p>
+          </div>
+          <div style="flex: calc(1814/1021); position: relative; margin: 1%">
+            <img class="has-modal" src="projects/drawing-robot/version-comparison.png" alt="A comparison of the first marker changer (right) with later versions that incorperated an eraser, but never came to fruition" style="width: 100%; height: auto; vertical-align: middle">
+            <p class="hover-caption">A comparison of the first marker changer (right) with later versions that incorperated an eraser, but never came to fruition</p>
+          </div>
         </div>
       </div>
       <div style="flex: 15%; align-self: center; margin: 1%">
@@ -109,7 +148,7 @@
         Error playing video </video>
     </div>
     <p>This 5×5×5 LED light cube was inspired by one I had seen at AACC. The cube is powered by an Arduino Nano connected to shift registers to handle the additional outputs. I first built a smaller and rougher 4×4×4 cube, and its effects were programmed by modifying the byte sent to the shift registers mathematically. The larger and cleaner 5×5×5 cube included drawing functions to make programming the effects easier.</p>
-    <div style="text-align: center"> <img class="has-modal" src="projects/light-cube-125/board-view.jpg" width="40%" alt="Circuit board of the 5×5×5 light cube"/> <img class="has-modal" src="projects/light-cube-125/internal-view.jpg" width="40%" alt="Internal view of the 5×5×5 light cube showing wires"/> </div>
+    <div style="text-align: center"> <img class="has-modal" src="projects/light-cube-125/board-view.jpg" width="40%" alt="Circuit board of the 5×5×5 light cube"> <img class="has-modal" src="projects/light-cube-125/internal-view.jpg" width="40%" alt="Internal view of the 5×5×5 light cube showing wires"> </div>
   </section>
   <div id="modal"> <img id="modal-content" alt=""/> <p id="modal-caption"></p></div>
   <script>
